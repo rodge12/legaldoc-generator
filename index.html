@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LegalDoc AI – UAE Freelance Contract Generator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2C3E94;
+      margin-bottom: 30px;
+    }
+
+    input, button {
+      width: 100%;
+      padding: 12px 15px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #2C3E94;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #5865B8;
+    }
+
+    label {
+      font-weight: bold;
+      color: #2F2F2F;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Generate UAE Freelance Contract</h1>
+    <form action="/api/generate" method="POST">
+      <label>Client Name</label>
+      <input name="clientName" placeholder="Client Name" required>
+      <label>Freelancer Name</label>
+      <input name="freelancerName" placeholder="Freelancer Name" required>
+      <label>Project Description</label>
+      <input name="project" placeholder="Project Description" required>
+      <label>Payment Amount (AED)</label>
+      <input name="amount" placeholder="Payment Amount" required>
+      <label>Start Date</label>
+      <input name="startDate" type="date" required>
+      <label>End Date</label>
+      <input name="endDate" type="date" required>
+      <button type="submit">Generate Contract</button>
+    </form>
+  </div>
+</body>
+</html>
